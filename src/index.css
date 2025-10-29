@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Regular_M";
+  max-width: 1600px;
+  margin: auto;
+  width: 100%;
+}
+@font-face {
+  font-family: "Bold_M";
+  src: url("/src/assets/Font/syne/static/Syne-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "SemiBold_M";
+  src: url("/src/assets/Font/syne/static/Syne-SemiBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Medium_M";
+  src: url("/src/assets/Font/syne/static/Syne-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Regular_M";
+  src: url("/src/assets/Font/syne/static/Syne-Regular.ttf") format("truetype");
+}
+
+#root {
+  width: 100%;
+}
+body .MuiTypography-root {
+  margin: 0px;
+  padding: 0px;
+}
+:root {
+  --primary: #539b51;
+  --secondary: #ff8521;
+  --white: white;
+  --inputbg: #25410d;
+  --text:#dcdcdc;
+  --bg:#25410d;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--white);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--secondary);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary);
+}
