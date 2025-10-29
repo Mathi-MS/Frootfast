@@ -44,7 +44,7 @@ const RegisterForm = () => {
 
   return (
     <>
-      <Box sx={{ textAlign: "center" }}>
+      <Box sx={{ textAlign: "center", width: "100%" }}>
         <Typography
           variant="h2"
           sx={{
@@ -58,7 +58,7 @@ const RegisterForm = () => {
             display: "inline-block",
           }}
         >
-          PreBook You FrootFast Box Now
+          PreBook Your FrootFast Box Now
         </Typography>
 
         <Box
@@ -69,6 +69,8 @@ const RegisterForm = () => {
             display: "flex",
             flexDirection: "column",
             gap: "15px",
+            maxWidth: "400px",
+            marginInline: "auto",
             input: {
               background: "#25410d",
               color: "var(--white)",
@@ -84,10 +86,6 @@ const RegisterForm = () => {
             },
             "input::placeholder": {
               color: "#dcdcdc",
-            },
-            ".MuiTypography-root": {
-              fontFamily: "Medium_M !important",
-              fontSize: "14px",
             },
           }}
         >
@@ -114,30 +112,28 @@ const RegisterForm = () => {
 
           {/* Mobile Number */}
           <div style={{ position: "relative" }}>
-            <div style={{ position: "relative" }}>
-              <span
-                style={{
-                  position: "absolute",
-                  left: "15px",
-                  top: "50%",
-                  transform: "translateY(-50%)",
-                  color: "#dcdcdc",
-                  fontFamily: "Medium_M",
-                  fontSize: "16px",
-                  pointerEvents: "none",
-                }}
-              >
-                +91
-              </span>
-              <input
-                type="tel"
-                placeholder="0000000000"
-                {...register("mobile")}
-                style={{
-                  paddingLeft: "50px",
-                }}
-              />
-            </div>
+            <span
+              style={{
+                position: "absolute",
+                left: "15px",
+                top: "50%",
+                transform: "translateY(-50%)",
+                color: "#dcdcdc",
+                fontFamily: "Medium_M",
+                fontSize: "16px",
+                pointerEvents: "none",
+              }}
+            >
+              +91
+            </span>
+            <input
+              type="tel"
+              placeholder="0000000000"
+              {...register("mobile")}
+              style={{
+                paddingLeft: "50px",
+              }}
+            />
             {errors.mobile && (
               <Typography
                 sx={{
@@ -151,6 +147,7 @@ const RegisterForm = () => {
               </Typography>
             )}
           </div>
+
           {/* Quantity Selector */}
           <div>
             <Typography
@@ -159,6 +156,7 @@ const RegisterForm = () => {
                 fontSize: "14px",
                 textAlign: "left",
                 paddingLeft: "5px !important",
+                fontFamily: "Medium_M",
               }}
             >
               Quantity
@@ -167,10 +165,10 @@ const RegisterForm = () => {
               style={{
                 display: "flex",
                 alignItems: "center",
-                justifyContent: "start",
                 gap: "15px",
                 marginTop: "10px",
                 marginLeft: "3px",
+                justifyContent: "start",
               }}
             >
               <button
@@ -212,7 +210,7 @@ const RegisterForm = () => {
                   height: "45px",
                   outline: "none",
                   fontFamily: "Medium_M",
-                  padding:"0px 0px 0px 15px "
+                  padding: "0px 0px 0px 15px ",
                 }}
               />
 
@@ -268,6 +266,7 @@ const RegisterForm = () => {
               </Typography>
             )}
           </div>
+
           {/* Terms & Conditions */}
           <Box
             sx={{
@@ -308,6 +307,7 @@ const RegisterForm = () => {
               </span>
             </label>
           </Box>
+
           {/* Submit Button */}
           <button
             type="submit"

@@ -6,7 +6,7 @@ const TermsAndConditions = () => {
       sx={{
         padding: "30px",
         backgroundColor: "#f9f9f9",
-        minHeight: "100vh",
+        minHeight: "max-content",
         fontFamily: "Medium_M",
         borderRadius: "5px",
       }}

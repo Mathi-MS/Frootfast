@@ -15,15 +15,31 @@ const Layout = () => {
           backgroundRepeat: "repeat",
           backgroundSize: "contain",
           backgroundPosition: "center",
-          display: "none",
           color: "var(--white)",
+          display: "none",
+          flexDirection: "column",
           "@media (max-width: 600px)": {
-            display: "block",
+            display: "flex",
           },
         }}
       >
+        {/* Header stays fixed at top */}
         <Header />
-        <Box sx={{ padding: "20px" }}>
+
+        {/* Center form vertically below header */}
+        <Box
+          sx={{
+            flex: 1,
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            padding: "20px",
+            minHeight: "calc(100vh - 80px)", // adjust header height space
+            "@media (max-width: 600px)": {
+              minHeight: "calc(100vh - 80px)",
+            },
+          }}
+        >
           <Outlet />
         </Box>
       </Box>
