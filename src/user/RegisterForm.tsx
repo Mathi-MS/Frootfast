@@ -210,7 +210,6 @@ const RegisterForm = () => {
                   height: "45px",
                   outline: "none",
                   fontFamily: "Medium_M",
-                  padding: "0px 0px 0px 15px ",
                 }}
               />
 

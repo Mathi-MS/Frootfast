@@ -34,9 +34,9 @@ const Layout = () => {
             justifyContent: "center",
             alignItems: "center",
             padding: "20px",
-            minHeight: "calc(100vh - 80px)", // adjust header height space
+            minHeight: "calc(100vh - 110px)", 
             "@media (max-width: 600px)": {
-              minHeight: "calc(100vh - 80px)",
+              minHeight: "calc(100vh - 110px)",
             },
           }}
         >
