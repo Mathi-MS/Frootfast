@@ -7,8 +7,25 @@ import Products from "../user/Products";
 import OrderHistory from "../user/OrderHistory";
 import OrderedForm from "../user/OrderedForm";
 import OrderedSuccessfully from "../user/OrderedSuccesfully";
+import Login from "../admin/Login";
+import AdminLayout from "../admin/adminLayout";
+import Prebook from "../admin/Prebook";
 
 const routes = createHashRouter([
+  {
+    path: "/ad/login",
+    element: <PublicOnlyRoute element={<Login />} />,
+  },
+  {
+    path: "/admin",
+    element: <PublicOnlyRoute element={<AdminLayout/>} />,
+    children: [
+      {
+        path: "/admin",
+        element: <Prebook />,
+      },
+    ]
+  },
   {
     path: "/",
     element: <PublicOnlyRoute element={<Layout />} />,
