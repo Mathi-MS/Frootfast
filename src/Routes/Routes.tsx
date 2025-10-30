@@ -5,6 +5,8 @@ import Layout from "../user/Layout";
 import RegisterForm from "../user/RegisterForm";
 import Products from "../user/Products";
 import OrderHistory from "../user/OrderHistory";
+import OrderedForm from "../user/OrderedForm";
+import OrderedSuccessfully from "../user/OrderedSuccesfully";
 
 const routes = createHashRouter([
   {
@@ -24,8 +26,16 @@ const routes = createHashRouter([
         element: <PublicOnlyRoute element={<Products />} />,
       },
       {
+        path: "/ordered",
+        element: <PublicOnlyRoute element={<OrderedForm />} />,
+      },
+      {
         path: "/order-history",
         element: <PublicOnlyRoute element={<OrderHistory />} />,
+      },
+      {
+        path: "/order-succesfully",
+        element: <PublicOnlyRoute element={<OrderedSuccessfully />} />,
       },
     ],
   },

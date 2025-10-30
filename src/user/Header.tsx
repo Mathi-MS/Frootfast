@@ -138,11 +138,11 @@ const Header = () => {
             </MenuItem>
             <Divider />
             <MenuItem
-              onClick={() => handleNavigate("/order-history")}
+              onClick={() => handleNavigate("/ordered")}
               sx={{
                 fontFamily: "Bold_M",
                 fontSize: "14px",
-                color: isActive("/order-history")
+                color: isActive("/ordered")
                   ? "var(--secondary)"
                   : "inherit",
               }}

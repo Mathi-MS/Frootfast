@@ -3,9 +3,10 @@ import { Box, Typography } from "@mui/material";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { MdOutlineDateRange } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
+import { showError, showSuccess } from "../Custom/CustomToast";
 
 const formSchema = z.object({
   fullname: z.string().min(1, "Please enter name."),
@@ -18,12 +19,14 @@ type FormData = z.infer<typeof formSchema>;
 
 const RegisterForm = () => {
   const navigate = useNavigate();
+  const [termsAccepted, setTermsAccepted] = useState(false);
   const {
     register,
     handleSubmit,
     formState: { errors },
     setValue,
     getValues,
+    reset,
   } = useForm<FormData>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -39,7 +42,19 @@ const RegisterForm = () => {
   }, [setValue]);
 
   const onSubmit = (data: FormData) => {
-    console.log("Form Data:", data);
+    if (!termsAccepted) {
+      showError("Read & accept Terms to submit.");
+      return;
+    }
+    const formWithTerms = {
+      ...data,
+      termsAccepted: termsAccepted,
+    };
+    console.log("Form Data:", formWithTerms);
+    showSuccess("Ordered successfully!");
+    reset({ fullname: "", mobile: "" });
+    setTermsAccepted(false);
+    navigate("/order-succesfully");
   };
 
   return (
@@ -116,7 +131,7 @@ const RegisterForm = () => {
               style={{
                 position: "absolute",
                 left: "15px",
-                top: "50%",
+                top: "30px",
                 transform: "translateY(-50%)",
                 color: "#dcdcdc",
                 fontFamily: "Medium_M",
@@ -279,6 +294,8 @@ const RegisterForm = () => {
             <input
               type="checkbox"
               id="terms"
+              checked={termsAccepted}
+              onChange={(e) => setTermsAccepted(e.target.checked)}
               style={{
                 width: "18px",
                 height: "18px",
