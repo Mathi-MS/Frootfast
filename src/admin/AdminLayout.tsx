@@ -2,7 +2,7 @@
 import { Box } from "@mui/material";
 import { images } from "../assets/Images/Images";
 import { Outlet } from "react-router-dom";
-import AdminHeader from "./adminHeader";
+import AdminHeader from "./AdminHeader";
 
 const AdminLayout = () => {
   return (
