@@ -8,7 +8,7 @@ import OrderHistory from "../user/OrderHistory";
 import OrderedForm from "../user/OrderedForm";
 import OrderedSuccessfully from "../user/OrderedSuccesfully";
 import Login from "../admin/Login";
-import AdminLayout from "../admin/adminLayout";
+import AdminLayout from "../admin/AdminLayout";
 import Prebook from "../admin/Prebook";
 
 const routes = createHashRouter([
