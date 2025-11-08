@@ -11,6 +11,7 @@ import {
 } from "@mui/material";
 import { MdDownload } from "react-icons/md";
 import jsPDF from "jspdf";
+import { images } from "../assets/Images/Images";
 
 const dummyOrders = [
   {
@@ -114,28 +115,82 @@ const OrderHistory = () => {
     setPage(value);
   };
 
-  const generateInvoicePDF = (order: any) => {
-    const doc = new jsPDF();
+const generateInvoicePDF = async (order: any) => {
+  const doc = new jsPDF("p", "mm", "a4");
+  const toBase64 = (url: string) =>
+    fetch(url)
+      .then((res) => res.blob())
+      .then(
+        (blob) =>
+          new Promise<string>((resolve) => {
+            const reader = new FileReader();
+            reader.onloadend = () => resolve(reader.result as string);
+            reader.readAsDataURL(blob);
+          })
+      );
 
-    doc.setFont("helvetica", "bold");
-    doc.setFontSize(18);
-    doc.text("Order Invoice", 80, 20);
+  const logo = await toBase64(images.logo);
 
-    doc.setFont("helvetica", "normal");
-    doc.setFontSize(12);
-    doc.text(`Order ID: #${order.id}`, 20, 40);
-    doc.text(`Product: ${order.product}`, 20, 50);
-    doc.text(`Cost: ${order.cost}`, 20, 60);
-    doc.text(`Ordered Date: ${order.date}`, 20, 70);
-    doc.text(`Ordered Time: ${order.orderedTime}`, 20, 80);
-    doc.text(`Status: ${order.status}`, 20, 90);
-    doc.text(`Remarks: ${order.remarks}`, 20, 100);
+  doc.addImage({
+    imageData: logo,
+    format: "PNG",
+    x: 15,
+    y: 10,
+    width: 30, 
+    height: 20,
+    compression: "NONE", 
+  });
+  doc.setFont("helvetica", "bold");
+  doc.setFontSize(22);
+  doc.text("FrootFast Invoice", 105, 25, { align: "center" });
+  doc.setDrawColor(255, 133, 33);
+  doc.setLineWidth(1);
+  doc.line(15, 45, 195, 45);
+  doc.setFillColor(245, 245, 245);
+  doc.roundedRect(15, 50, 180, 35, 3, 3, "F");
+  doc.setFont("helvetica", "bold");
+  doc.setFontSize(14);
+  doc.setTextColor(50, 50, 50);
+  doc.text("Order Details", 20, 60);
+  doc.setFont("helvetica", "normal");
+  doc.setFontSize(12);
+  doc.text(`Order ID: #${order.id}`, 20, 70);
+  doc.text(`Status: ${order.status}`, 120, 70);
+  doc.text(`Ordered Date: ${order.date}`, 20, 80);
+  doc.text(`Ordered Time: ${order.orderedTime}`, 120, 80);
+  doc.setFont("helvetica", "bold");
+  doc.setFontSize(14);
+  doc.text("Product Summary", 20, 100);
+  doc.setFillColor(255, 133, 33);
+  doc.rect(15, 110, 180, 10, "F");
+  doc.setFont("helvetica", "bold");
+  doc.setFontSize(12);
+  doc.setTextColor(255, 255, 255);
+  doc.text("Product", 20, 117);
+  doc.text("Cost", 150, 117);
+  doc.setTextColor(50, 50, 50);
+  doc.setFont("helvetica", "normal");
+  doc.text(order.product, 20, 130);
+  doc.text(order.cost, 150, 130);
+  doc.setFillColor(245, 245, 245);
+  doc.roundedRect(15, 150, 180, 40, 3, 3, "F");
+  doc.setFont("helvetica", "bold");
+  doc.setFontSize(14);
+  doc.text("Payment Summary", 20, 162);
+  doc.setFont("helvetica", "normal");
+  doc.setFontSize(12);
+  doc.text(`Sub Total: ${order.cost}`, 20, 175);
+  doc.text("Delivery Charge: Free", 20, 185);
+  doc.setFont("helvetica", "bold");
+  doc.text(`Total: ${order.cost}`, 150, 185);
+  doc.setFont("helvetica", "italic");
+  doc.setFontSize(12);
+  doc.setTextColor(100, 100, 100);
+  doc.text("Thank you for choosing FrootFast!", 105, 270, { align: "center" });
+  doc.save(`Invoice_${order.id}.pdf`);
+};
 
-    doc.line(20, 110, 190, 110);
-    doc.text("Thank you for your order!", 65, 130);
 
-    doc.save(`Invoice_${order.id}.pdf`);
-  };
 
   const handleDownloadInvoice = (order: any) => {
     generateInvoicePDF(order);
