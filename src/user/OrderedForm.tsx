@@ -32,7 +32,21 @@ const OrderedForm = () => {
 
   return (
     <>
-      <Box sx={{ textAlign: "center", width: "100%" }}>
+      <Box
+        sx={{
+        textAlign: "center",
+        width: "500px",
+        background: "rgba(0, 0, 0, 0.6)",
+        padding: "40px 20px",
+        borderRadius: "10px",
+        "@media (max-width: 600px)": {
+          background: "transparent",
+          padding: "0px",
+          width: "100%",
+          borderRadius: "0px",
+        },
+      }}
+      >
         <Typography
           variant="h2"
           sx={{

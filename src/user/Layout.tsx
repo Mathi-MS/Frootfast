@@ -1,5 +1,5 @@
 "use client";
-import { Box, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 import { images } from "../assets/Images/Images";
 import Header from "./Header";
 import { Outlet } from "react-router-dom";
@@ -13,13 +13,14 @@ const Layout = () => {
           minHeight: "100vh",
           backgroundImage: `url(${images.userbackground})`,
           backgroundRepeat: "repeat",
-          backgroundSize: "contain",
-          backgroundPosition: "center",
+          backgroundSize: "600px",
+          backgroundPosition: "inherit",
           color: "var(--white)",
-          display: "none",
+          display: "flex",
           flexDirection: "column",
           "@media (max-width: 600px)": {
-            display: "flex",
+            backgroundPosition: "center",
+            backgroundSize: "contain",
           },
         }}
       >
@@ -34,7 +35,7 @@ const Layout = () => {
             justifyContent: "center",
             alignItems: "center",
             padding: "20px",
-            minHeight: "calc(100vh - 110px)", 
+            minHeight: "calc(100vh - 110px)",
             "@media (max-width: 600px)": {
               minHeight: "calc(100vh - 110px)",
             },
@@ -45,7 +46,7 @@ const Layout = () => {
       </Box>
 
       {/* DESKTOP VIEW */}
-      <Box
+      {/* <Box
         sx={{
           display: "flex",
           flexDirection: "column",
@@ -62,7 +63,7 @@ const Layout = () => {
         <Typography sx={{ fontSize: "30px", fontFamily: "Bold_M" }}>
           Please Check in Mobile Device
         </Typography>
-      </Box>
+      </Box> */}
     </>
   );
 };

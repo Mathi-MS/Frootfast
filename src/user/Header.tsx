@@ -174,6 +174,7 @@ const Header = () => {
               sx={{
                 fontFamily: "Bold_M",
                 fontSize: "14px",
+                minHeight: "45px !important",
                 color: isActive("/") ? "var(--secondary)" : "inherit",
               }}
             >
@@ -181,23 +182,11 @@ const Header = () => {
             </MenuItem>
             <Divider />
             <MenuItem
-              onClick={() => handleNavigate("/terms-and-conditions")}
-              sx={{
-                fontFamily: "Bold_M",
-                fontSize: "14px",
-                color: isActive("/terms-and-conditions")
-                  ? "var(--secondary)"
-                  : "inherit",
-              }}
-            >
-              Terms & Conditions
-            </MenuItem>
-            <Divider />
-            <MenuItem
               onClick={() => handleNavigate("/products")}
               sx={{
                 fontFamily: "Bold_M",
                 fontSize: "14px",
+                minHeight: "45px !important",
                 color: isActive("/products") ? "var(--secondary)" : "inherit",
               }}
             >
@@ -209,10 +198,49 @@ const Header = () => {
               sx={{
                 fontFamily: "Bold_M",
                 fontSize: "14px",
+                minHeight: "45px !important",
                 color: isActive("/ordered") ? "var(--secondary)" : "inherit",
               }}
             >
               Ordered History
+            </MenuItem>
+            <Divider />
+            <MenuItem
+              onClick={() => handleNavigate("/contact")}
+              sx={{
+                fontFamily: "Bold_M",
+                fontSize: "14px",
+                minHeight: "45px !important",
+                color: isActive("/contact") ? "var(--secondary)" : "inherit",
+              }}
+            >
+              Contact
+            </MenuItem>
+            <Divider />
+            <MenuItem
+              onClick={() => handleNavigate("/review")}
+              sx={{
+                fontFamily: "Bold_M",
+                fontSize: "14px",
+                minHeight: "45px !important",
+                color: isActive("/review") ? "var(--secondary)" : "inherit",
+              }}
+            >
+              Review
+            </MenuItem>
+            <Divider />
+            <MenuItem
+              onClick={() => handleNavigate("/terms-and-conditions")}
+              sx={{
+                fontFamily: "Bold_M",
+                fontSize: "14px",
+                minHeight: "45px !important",
+                color: isActive("/terms-and-conditions")
+                  ? "var(--secondary)"
+                  : "inherit",
+              }}
+            >
+              Terms & Conditions
             </MenuItem>
           </Menu>
         </Box>

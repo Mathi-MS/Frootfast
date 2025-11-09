@@ -10,6 +10,8 @@ import OrderedSuccessfully from "../user/OrderedSuccesfully";
 import Login from "../admin/Login";
 import AdminLayout from "../admin/AdminLayout";
 import Prebook from "../admin/Prebook";
+import Review from "../user/Review";
+import Contact from "../user/Contact";
 
 const routes = createHashRouter([
   {
@@ -53,6 +55,14 @@ const routes = createHashRouter([
       {
         path: "/order-succesfully",
         element: <PublicOnlyRoute element={<OrderedSuccessfully />} />,
+      },
+      {
+        path: "/review",
+        element: <PublicOnlyRoute element={<Review />} />,
+      },
+      {
+        path: "/contact",
+        element: <PublicOnlyRoute element={<Contact />} />,
       },
     ],
   },
