@@ -19,7 +19,6 @@ const SelectOutletPopup = () => {
   const { selectedOutlet, setSelectedOutlet } = useOutlet();
 
   useEffect(() => {
-    // ✅ Check both context and cookies to decide whether to show the popup
     const savedOutlet = Cookies.get("selectedOutlet");
     if (!savedOutlet && !selectedOutlet) {
       setOpen(true);
