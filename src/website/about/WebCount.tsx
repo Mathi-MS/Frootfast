@@ -17,7 +17,7 @@ const stats = [
 
 const WebCount = () => {
   return (
-    <Box className="website-container" sx={{ py: 8, textAlign: "center",background:"#f5f5f5" }}>
+    <Box className="website-container" sx={{ py: 8, textAlign: "center",background:"var(--white)" }}>
       
       {/* Heading */}
       <Typography

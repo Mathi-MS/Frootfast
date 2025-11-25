@@ -33,7 +33,7 @@ const WebFaq = () => {
         variant="h4"
         fontWeight={700}
         textAlign="center"
-        sx={{ mb: 5,fontFamily:"Regular_M" }}
+        sx={{ mb: "30px !important",fontFamily:"Regular_M" }}
       >
         Frequently Asked Questions
       </Typography>
@@ -41,9 +41,9 @@ const WebFaq = () => {
       {/* FAQ LIST */}
       <Box sx={{ maxWidth: "800px", mx: "auto" }}>
         {faqData.map((item, index) => (
-          <Accordion key={index} sx={{ mb: 1 }}>
+          <Accordion key={index} sx={{p:1}}>
             <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-              <Typography fontWeight={600} sx={{fontFamily:"Regular_M"}}>{item.question}</Typography>
+              <Typography fontWeight={600} sx={{fontFamily:"Regular_M",opacity:".8"}}>{item.question}</Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography sx={{ color: "#555", lineHeight: 1.6, fontFamily:"Regular_M"}} >

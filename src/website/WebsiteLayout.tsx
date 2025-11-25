@@ -4,7 +4,6 @@ import WebOffer from "./home/WebOffer";
 import WebNavbar from "./home/WebNavbar";
 import WebFooter from "./home/WebFooter";
 import { Outlet } from "react-router-dom";
-import WebContactHome from "./contact/WebContactHome";
 
 const WebsiteLayout = () => {
   return (
@@ -13,7 +12,6 @@ const WebsiteLayout = () => {
             <WebOffer />
             <WebNavbar />
             <Outlet />
-            <WebContactHome />
             <WebFooter />
         </Box>
     </>

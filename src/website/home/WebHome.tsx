@@ -1,4 +1,5 @@
 import WebAboutHome from "../about/WebAboutHome"
+import WebContactHome from "../contact/WebContactHome"
 import WebPlan from "../plan/WebPlan"
 import WebBanner from "./WebBanner"
 import WebJoin from "./WebJoin"
@@ -12,6 +13,7 @@ const WebHome = () =>{
             <WebPlan />
             <WebTesti />
             <WebJoin />
+            <WebContactHome />
         </>
     )
 }

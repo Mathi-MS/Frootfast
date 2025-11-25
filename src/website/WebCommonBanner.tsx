@@ -21,7 +21,7 @@ const WebCommonBanner = () => {
     <Box
       sx={{
         backgroundColor: "#f5f5f5",
-        padding: "80px 0",
+        padding: "150px 0",
         textAlign: "center",
         backgroundImage: `url(${images.bannerbg})`,
         backgroundRepeat: "repeat",
