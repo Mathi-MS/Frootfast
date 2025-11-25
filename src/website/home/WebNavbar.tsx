@@ -1,9 +1,10 @@
 import { Box, IconButton, Drawer, List, ListItem, Button } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
-import { images } from "../assets/Images/Images";
+import { images } from "../../assets/Images/Images";
 import { useNavigate, useLocation } from "react-router-dom";
 import { useState } from "react";
+import { FaBarsStaggered } from "react-icons/fa6";
 
 const WebNavbar = () => {
   const navigate = useNavigate();
@@ -92,6 +93,7 @@ const WebNavbar = () => {
                 background: "var(--newprimary)",
                 color: "#fff",
                 textTransform: "none",
+                fontFamily:"Medium_M",
                 px: 3,
               }}
               onClick={() => navigate("/book-order")}
@@ -104,7 +106,7 @@ const WebNavbar = () => {
               sx={{ display: { xs: "flex", md: "none" } }}
               onClick={() => setOpen(true)}
             >
-              <MenuIcon />
+              <FaBarsStaggered style={{fontSize:"20px",color:"var(--primary)"}}/>
             </IconButton>
           </Box>
         </Box>
@@ -154,7 +156,7 @@ const WebNavbar = () => {
               <Button
                 variant="contained"
                 fullWidth
-                sx={{ textTransform: "none", background: "var(--newprimary)",fontFamily:"Medium_M" }}
+                sx={{ textTransform: "none", background: "var(--newprimary)",fontFamily:"Medium_M !important" }}
                 onClick={() => {
                   navigate("/book-order");
                   setOpen(false);

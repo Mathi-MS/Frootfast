@@ -1,5 +1,5 @@
 import { Box, Typography, Link } from "@mui/material";
-import { images } from "../assets/Images/Images";
+import { images } from "../../assets/Images/Images";
 import { useNavigate } from "react-router-dom";
 import { FiPhone } from "react-icons/fi";
 import { LuMail } from "react-icons/lu";

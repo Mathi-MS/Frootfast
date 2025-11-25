@@ -76,7 +76,7 @@ const WebBanner = () => {
       >
         <Box
           component="img"
-          src={images.logo}
+          src={images.banner}
           alt="Fruits"
           sx={{
             width: { xs: "90%", md: "80%" },

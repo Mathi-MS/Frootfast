@@ -1,10 +1,14 @@
 "use client";
 import { Box } from "@mui/material";
-import WebOffer from "./WebOffer";
-import WebNavbar from "./WebNavbar";
-import WebFooter from "./WebFooter";
+import WebOffer from "./home/WebOffer";
+import WebNavbar from "./home/WebNavbar";
+import WebFooter from "./home/WebFooter";
 import WebBanner from "./home/WebBanner";
-import WebContact from "./WebContact";
+import WebContact from "./contact/WebContact";
+import WebTesti from "./home/WebTestimonal";
+import WebJoin from "./home/WebJoin";
+import WebAbout from "./about/WebAbout";
+import WebPlan from "./plan/Webplan";
 const WebsiteLayout = () => {
   return (
     <>
@@ -12,6 +16,10 @@ const WebsiteLayout = () => {
             <WebOffer />
             <WebNavbar />
             <WebBanner />
+            <WebAbout />
+            <WebPlan />
+            <WebTesti />
+            <WebJoin />
             <WebContact />
             <WebFooter />
         </Box>

@@ -14,6 +14,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { HiOutlineLocationMarker } from "react-icons/hi";
 import { LuMail } from "react-icons/lu";
 import { FiPhone } from "react-icons/fi";
+import { GoDotFill } from "react-icons/go";
 
 const schema = z.object({
   fullName: z.string().min(3, "Full name is required"),
@@ -58,6 +59,7 @@ const WebContact = () => {
             background: "#fafafa",
             borderRadius: "10px",
             p: 4,
+            width:"100%",
             border: "1px solid #eee",
           }}
         >
@@ -213,7 +215,7 @@ const WebContact = () => {
         </Box>
 
         {/* RIGHT SIDE - CONTACT BOXES */}
-        <Box sx={{ flex: 1,"& p":{
+        <Box sx={{ flex: 1,width:"100%","& p":{
             fontFamily:"Regular_M"
         } }}>
           {/* PHONE CARD */}
@@ -341,10 +343,12 @@ const WebContact = () => {
                   Delivery Areas
                 </Typography>
                 <Typography sx={{ opacity: 0.7 }}>
-                  Villupuram
+                  <GoDotFill />
+                    Villupuram
                 </Typography>
                 <Typography sx={{ opacity: 0.7 }}>
-                  Cuddalore
+                  <GoDotFill />
+                    Cuddalore
                 </Typography>
               </Box>
             </Box>
