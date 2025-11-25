@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { FiPhone } from "react-icons/fi";
 import { LuMail } from "react-icons/lu";
 import { HiOutlineLocationMarker } from "react-icons/hi";
+import { commonWord } from "../../Custom/CommonWord";
 
 const WebFooter = () => {
   const navigate = useNavigate();
@@ -21,7 +22,9 @@ const WebFooter = () => {
       >
         {/* -------- Box 1 - Logo + About -------- */}
         <Box>
-          <Box component="img" src={images.logo} alt="logo" width={120} />
+          <Box component="a" href="/" sx={{ display: "inline-block" }}>
+            <Box component="img" src={images.logo} alt="logo" width={120} />
+          </Box>
 
           <Typography sx={{ mt: 2, color: "#555", lineHeight: 1.6,fontFamily:"Regular_M",fontSize:"18px" }}>
             Start your morning fresh with daily deliveries of freshly cut fruits.
@@ -89,24 +92,25 @@ const WebFooter = () => {
       >
         {/* Phone */}
         <Link
-          href="tel:+916369881174"
+          href={`tel:${commonWord}`}
           underline="none"
           color="inherit"
           className="item"
         >
           <FiPhone style={{ fontSize: 20,color:"var(--primary)" }} />
-          <Typography>+91 6369881174</Typography>
+          <Typography>                  {commonWord.mobileNumber}
+          </Typography>
         </Link>
 
         {/* Email */}
         <Link
-          href="mailto:frootfastofficial@gmail.com"
+          href={`mailto:${commonWord.mobileNumber}`}
           underline="none"
           color="inherit"
           className="item"
         >
           <LuMail  style={{ fontSize: 20,color:"var(--primary)" }} />
-          <Typography>frootfastofficial@gmail.com</Typography>
+          <Typography>{commonWord.email}</Typography>
         </Link>
 
         {/* Location */}

@@ -55,44 +55,44 @@ const routes = createHashRouter([
       },
     ]
   },
-  // {
-  //   path: "/",
-  //   element: <PublicOnlyRoute element={<Layout />} />,
-  //   children: [
-  //     {
-  //       path: "/",
-  //       element: <RegisterForm />,
-  //     },
-  //     {
-  //       path: "/terms-and-conditions",
-  //       element: <PublicOnlyRoute element={<TermsAndConditions />} />,
-  //     },
-  //     {
-  //       path: "/products",
-  //       element: <PublicOnlyRoute element={<Products />} />,
-  //     },
-  //     {
-  //       path: "/ordered",
-  //       element: <PublicOnlyRoute element={<OrderedForm />} />,
-  //     },
-  //     {
-  //       path: "/order-history",
-  //       element: <PublicOnlyRoute element={<OrderHistory />} />,
-  //     },
-  //     {
-  //       path: "/order-succesfully",
-  //       element: <PublicOnlyRoute element={<OrderedSuccessfully />} />,
-  //     },
-  //     {
-  //       path: "/review",
-  //       element: <PublicOnlyRoute element={<Review />} />,
-  //     },
-  //     {
-  //       path: "/contact",
-  //       element: <PublicOnlyRoute element={<Contact />} />,
-  //     },
-  //   ],
-  // },
+  {
+    path: "/book",
+    element: <PublicOnlyRoute element={<Layout />} />,
+    children: [
+      {
+        path: "",
+        element: <RegisterForm />,
+      },
+      {
+        path: "terms-and-conditions",
+        element: <PublicOnlyRoute element={<TermsAndConditions />} />,
+      },
+      {
+        path: "products",
+        element: <PublicOnlyRoute element={<Products />} />,
+      },
+      {
+        path: "ordered",
+        element: <PublicOnlyRoute element={<OrderedForm />} />,
+      },
+      {
+        path: "order-history",
+        element: <PublicOnlyRoute element={<OrderHistory />} />,
+      },
+      {
+        path: "order-succesfully",
+        element: <PublicOnlyRoute element={<OrderedSuccessfully />} />,
+      },
+      {
+        path: "review",
+        element: <PublicOnlyRoute element={<Review />} />,
+      },
+      {
+        path: "contact",
+        element: <PublicOnlyRoute element={<Contact />} />,
+      },
+    ],
+  },
 ]);
 
 export default routes;

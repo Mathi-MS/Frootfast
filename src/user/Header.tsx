@@ -170,72 +170,72 @@ const Header = () => {
             }}
           >
             <MenuItem
-              onClick={() => handleNavigate("/")}
+              onClick={() => handleNavigate("/book")}
               sx={{
                 fontFamily: "Bold_M",
                 fontSize: "14px",
                 minHeight: "45px !important",
-                color: isActive("/") ? "var(--secondary)" : "inherit",
+                color: isActive("/book") ? "var(--secondary)" : "inherit",
               }}
             >
               Home
             </MenuItem>
             <Divider />
             <MenuItem
-              onClick={() => handleNavigate("/products")}
+              onClick={() => handleNavigate("/book/products")}
               sx={{
                 fontFamily: "Bold_M",
                 fontSize: "14px",
                 minHeight: "45px !important",
-                color: isActive("/products") ? "var(--secondary)" : "inherit",
+                color: isActive("/book/products") ? "var(--secondary)" : "inherit",
               }}
             >
               Products
             </MenuItem>
             <Divider />
             <MenuItem
-              onClick={() => handleNavigate("/ordered")}
+              onClick={() => handleNavigate("/book/ordered")}
               sx={{
                 fontFamily: "Bold_M",
                 fontSize: "14px",
                 minHeight: "45px !important",
-                color: isActive("/ordered") ? "var(--secondary)" : "inherit",
+                color: isActive("/book/ordered") ? "var(--secondary)" : "inherit",
               }}
             >
               Ordered History
             </MenuItem>
-            <Divider />
+            {/* <Divider />
             <MenuItem
-              onClick={() => handleNavigate("/contact")}
+              onClick={() => handleNavigate("/book/contact")}
               sx={{
                 fontFamily: "Bold_M",
                 fontSize: "14px",
                 minHeight: "45px !important",
-                color: isActive("/contact") ? "var(--secondary)" : "inherit",
+                color: isActive("/book/contact") ? "var(--secondary)" : "inherit",
               }}
             >
               Contact
-            </MenuItem>
+            </MenuItem> */}
             <Divider />
             <MenuItem
-              onClick={() => handleNavigate("/review")}
+              onClick={() => handleNavigate("/book/review")}
               sx={{
                 fontFamily: "Bold_M",
                 fontSize: "14px",
                 minHeight: "45px !important",
-                color: isActive("/review") ? "var(--secondary)" : "inherit",
+                color: isActive("/book/review") ? "var(--secondary)" : "inherit",
               }}
             >
               Review
             </MenuItem>
             <Divider />
             <MenuItem
-              onClick={() => handleNavigate("/terms-and-conditions")}
+              onClick={() => handleNavigate("/book/terms-and-conditions")}
               sx={{
                 fontFamily: "Bold_M",
                 fontSize: "14px",
                 minHeight: "45px !important",
-                color: isActive("/terms-and-conditions")
+                color: isActive("/book/terms-and-conditions")
                   ? "var(--secondary)"
                   : "inherit",
               }}

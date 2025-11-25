@@ -78,6 +78,17 @@ body .MuiTypography-root {
     clip-path: polygon(0 0, 100% 0, calc(100% - 60px) 100%, 0% 100%);
     z-index: 2;
 }
+.logo-bgbig{
+  position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 254px;
+    height: 100%;
+    background-color:var(--newprimary);
+    -webkit-clip-path: polygon(0 0, 100% 0, calc(100% - 60px) 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, calc(100% - 60px) 100%, 0% 100%);
+    z-index: 1;
+}
 
 @media (max-width:600px){
   .website-container{

@@ -15,6 +15,7 @@ import { HiOutlineLocationMarker } from "react-icons/hi";
 import { LuMail } from "react-icons/lu";
 import { FiPhone } from "react-icons/fi";
 import { GoDotFill } from "react-icons/go";
+import { commonWord } from "../../Custom/CommonWord";
 
 const schema = z.object({
   fullName: z.string().min(3, "Full name is required"),
@@ -135,7 +136,7 @@ const WebContactHome = () => {
             </Typography>
             <TextField
               fullWidth
-              placeholder="+91 98765 43210"
+              placeholder={`${commonWord.mobileNumber}`}
               {...register("mobile")}
               error={!!errors.mobile}
               helperText={errors.mobile?.message}
@@ -239,9 +240,9 @@ const WebContactHome = () => {
                   sx={{
                     cursor: "pointer",
                   }}
-                  onClick={() => (window.location.href = "tel:+916369881174")}
+                  onClick={() => (window.location.href = `tel:${commonWord}`)}
                 >
-                  +91 63698 81174
+                  {commonWord.mobileNumber}
                 </Typography>
 
                 <Typography sx={{ opacity: 0.7 }}>
@@ -273,10 +274,10 @@ const WebContactHome = () => {
                     cursor: "pointer",
                   }}
                   onClick={() =>
-                    (window.location.href = "mailto:frootfastofficial@gmail.com")
+                    (window.location.href = `mailto:${commonWord.email}`)
                   }
                 >
-                  frootfastofficial@gmail.com
+                  {commonWord.email}
                 </Typography>
 
                 <Typography sx={{ opacity: 0.7 }}>
@@ -317,9 +318,10 @@ const WebContactHome = () => {
                     fontFamily:"Regular_M",
                     fontWeight:"600"
                   }}
-                  onClick={() =>
-                    (window.location.href = "https://wa.me/916369881174")
-                  }
+                  onClick={() => {
+                    const message = encodeURIComponent("Hello, I would like to know more about your plans.");
+                    window.open(`https://wa.me/${commonWord.mobileNumbernew}?text=${message}`, "_blank");
+                  }}
                 >
                   Message on WhatsApp
                 </Button>

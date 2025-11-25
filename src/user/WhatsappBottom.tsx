@@ -1,11 +1,11 @@
 import { Fab, Tooltip } from "@mui/material";
 import { FaWhatsapp } from "react-icons/fa";
 import { useOutlet } from "./OutletContext";
+import { commonWord } from "../Custom/CommonWord";
 
 const WhatsappBottom = () => {
   const { selectedOutlet } = useOutlet();
-  const whatsappNumber =
-    selectedOutlet === "Villupuram" ? "919943431297" : "919677851151";
+  const whatsappNumber = commonWord.mobileNumbernew
   const message = "Hello! I’d like to know more about Froot Fast.";
 
   const handleClick = () => {

@@ -25,7 +25,7 @@ const OrderedForm = () => {
 
   const onSubmit = (data: FormData) => {
     console.log("Form Data:", data);
-    navigate("/order-history");
+    navigate("/book/order-history");
     showError("Invalid mobile number!");
     reset();
   };

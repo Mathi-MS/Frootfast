@@ -64,7 +64,7 @@ const WebBanner = () => {
             textTransform: "none",
             backgroundColor: "var(--primary)",
             fontFamily:"Regular_M",
-            ":hover": { backgroundColor: "var(--primary-dark)" },
+            ":hover": { opacity: ".8" },
           }}
         >
           Subscribe Now

@@ -54,7 +54,7 @@ const RegisterForm = () => {
     showSuccess("Ordered successfully!");
     reset({ fullname: "", mobile: "", boxType: "" });
     setTermsAccepted(false);
-    navigate("/order-succesfully");
+    navigate("/book/order-succesfully");
   };
 
   return (
@@ -312,7 +312,7 @@ const RegisterForm = () => {
                 color: "var(--secondary)",
                 textDecoration: "underline",
               }}
-              onClick={() => navigate("/terms-and-conditions")}
+              onClick={() => navigate("/book/terms-and-conditions")}
             >
               Terms & Conditions
             </span>

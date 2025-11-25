@@ -1,10 +1,11 @@
 import { Tooltip, Fab } from "@mui/material";
 import { FaPhoneAlt } from "react-icons/fa";
 import { useOutlet } from "./OutletContext";
+import { commonWord } from "../Custom/CommonWord";
 
 const MobileBottom = () => {
   const { selectedOutlet } = useOutlet();
-  const phoneNumber = selectedOutlet === "Villupuram" ? "919943431297" : "919677851151";
+  const phoneNumber = commonWord.mobileNumber;
 
   const handleClick = () => {
     window.location.href = `tel:${phoneNumber}`;

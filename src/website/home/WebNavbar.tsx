@@ -40,7 +40,7 @@ const WebNavbar = () => {
           {/* Left Logo */}
           <Box sx={{ display: "flex", alignItems: "center" }}>
             <Box className="logo-bg"></Box>
-
+            <Box className="logo-bgbig"></Box>
             <Box
               sx={{
                 width: "max-content",
@@ -96,9 +96,9 @@ const WebNavbar = () => {
                 fontFamily:"Medium_M",
                 px: 3,
               }}
-              onClick={() => navigate("/book-order")}
+              onClick={() => navigate("/book")}
             >
-              Book Your Order
+              Book Your Demo
             </Button>
 
             {/* Mobile Toggle */}
@@ -158,11 +158,11 @@ const WebNavbar = () => {
                 fullWidth
                 sx={{ textTransform: "none", background: "var(--newprimary)",fontFamily:"Medium_M !important" }}
                 onClick={() => {
-                  navigate("/book-order");
+                  navigate("/book");
                   setOpen(false);
                 }}
               >
-                Book Your Order
+                Book Your Demo
               </Button>
             </ListItem>
           </List>
