@@ -12,8 +12,13 @@ import AdminLayout from "../admin/AdminLayout";
 import Prebook from "../admin/Prebook";
 import Review from "../user/Review";
 import Contact from "../user/Contact";
+import WebsiteLayout from "../website/WebsiteLayout";
 
 const routes = createHashRouter([
+  {
+    path: "/",
+    element: <PublicOnlyRoute element={<WebsiteLayout />} />,
+  },
   {
     path: "/ad/login",
     element: <PublicOnlyRoute element={<Login />} />,
@@ -28,44 +33,44 @@ const routes = createHashRouter([
       },
     ]
   },
-  {
-    path: "/",
-    element: <PublicOnlyRoute element={<Layout />} />,
-    children: [
-      {
-        path: "/",
-        element: <RegisterForm />,
-      },
-      {
-        path: "/terms-and-conditions",
-        element: <PublicOnlyRoute element={<TermsAndConditions />} />,
-      },
-      {
-        path: "/products",
-        element: <PublicOnlyRoute element={<Products />} />,
-      },
-      {
-        path: "/ordered",
-        element: <PublicOnlyRoute element={<OrderedForm />} />,
-      },
-      {
-        path: "/order-history",
-        element: <PublicOnlyRoute element={<OrderHistory />} />,
-      },
-      {
-        path: "/order-succesfully",
-        element: <PublicOnlyRoute element={<OrderedSuccessfully />} />,
-      },
-      {
-        path: "/review",
-        element: <PublicOnlyRoute element={<Review />} />,
-      },
-      {
-        path: "/contact",
-        element: <PublicOnlyRoute element={<Contact />} />,
-      },
-    ],
-  },
+  // {
+  //   path: "/",
+  //   element: <PublicOnlyRoute element={<Layout />} />,
+  //   children: [
+  //     {
+  //       path: "/",
+  //       element: <RegisterForm />,
+  //     },
+  //     {
+  //       path: "/terms-and-conditions",
+  //       element: <PublicOnlyRoute element={<TermsAndConditions />} />,
+  //     },
+  //     {
+  //       path: "/products",
+  //       element: <PublicOnlyRoute element={<Products />} />,
+  //     },
+  //     {
+  //       path: "/ordered",
+  //       element: <PublicOnlyRoute element={<OrderedForm />} />,
+  //     },
+  //     {
+  //       path: "/order-history",
+  //       element: <PublicOnlyRoute element={<OrderHistory />} />,
+  //     },
+  //     {
+  //       path: "/order-succesfully",
+  //       element: <PublicOnlyRoute element={<OrderedSuccessfully />} />,
+  //     },
+  //     {
+  //       path: "/review",
+  //       element: <PublicOnlyRoute element={<Review />} />,
+  //     },
+  //     {
+  //       path: "/contact",
+  //       element: <PublicOnlyRoute element={<Contact />} />,
+  //     },
+  //   ],
+  // },
 ]);
 
 export default routes;

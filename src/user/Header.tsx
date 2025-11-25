@@ -53,15 +53,15 @@ const Header = () => {
       {/* Logo */}
       <Box
         sx={{
-          background: "white",
-          padding: "5px 20px",
+          // background: "white",
+          padding: "5px 0px",
           width: "max-content",
           borderRadius: "5px",
           cursor: "pointer",
         }}
         onClick={() => navigate("/")}
       >
-        <Box component="img" src={images.logo} alt="logo" width={70} />
+        <Box component="img" src={images.logo} alt="logo" width={80} />
       </Box>
 
       {/* Outlet Select + Menu */}
