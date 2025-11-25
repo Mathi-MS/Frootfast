@@ -34,16 +34,30 @@ const plans = [
 
 const WebPlan = () => {
   return (
-    <Box className="website-container" sx={{ py: { xs: 6, md: 10 } }}>
-      
-      {/* Heading */}
+    <Box className="website-container" sx={{position:"relative", py: { xs: 6, md: 10 },background:"#002D00" }}>
+      <Box sx={{
+        position :"absolute",
+        top:"0px",
+        left:"0px",
+        width:"100%",
+        height:"100%",
+        backgroundImage: `url(${images.bglayer})`,
+        backgroundRepeat: "repeat",
+        backgroundSize: "600px",
+        backgroundPosition: "inherit",
+        opacity:.2
+    }}>
+    </Box>
+      <Box sx={{position:"relative",zIndex:"2"}}>
+        {/* Heading */}
       <Typography
         sx={{
           fontSize: 40,
           fontWeight: 700,
           textAlign: "center",
           fontFamily:"Regular_M",
-          color:"var(--white)"
+          color:"var(--white)",
+          opacity:".9"
         }}
       >
         Choose Your Perfect Plan
@@ -56,9 +70,10 @@ const WebPlan = () => {
           maxWidth: 600,
           mx: "auto !important",
           color: "var(--white)",
-          mb: "20px !important",
+          mb: "20px !important",  
           fontFamily:"Regular_M",
           lineHeight: 1.6,
+          opacity:".8"
         }}
       >
         Select from our carefully curated subscription packs designed for
@@ -139,6 +154,7 @@ const WebPlan = () => {
             </Button>
           </Box>
         ))}
+      </Box>
       </Box>
     </Box>
   );

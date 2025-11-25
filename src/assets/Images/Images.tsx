@@ -3,12 +3,13 @@ import logo from "./logo.webp";
 import userbackground from "./background.webp";
 import products from "./product1.webp";
 import bannerbg from "./backgroundbanner.jpg";
-import aboutimage from "./about.jpg";
+import aboutimage from "./about.png";
 import product1 from "./p1.png";
 import product2 from "./p2.png";
 import product3 from "./p3.png";
 import product4 from "./p4.png";
 import banner from "./banner.png";
+import bglayer from "./bglayer.png";
 export const images = {
   favicon: favicon,
   logo:logo,
@@ -21,4 +22,5 @@ export const images = {
   product3:product3,
   product4:product4,
   banner:banner,
+  bglayer:bglayer,
 };
