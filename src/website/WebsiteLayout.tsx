@@ -8,7 +8,7 @@ import WebContact from "./contact/WebContact";
 import WebTesti from "./home/WebTestimonal";
 import WebJoin from "./home/WebJoin";
 import WebAbout from "./about/WebAbout";
-import WebPlan from "./plan/Webplan";
+import WebPlan from "./plan/WebPlan";
 const WebsiteLayout = () => {
   return (
     <>
