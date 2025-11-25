@@ -13,11 +13,33 @@ import Prebook from "../admin/Prebook";
 import Review from "../user/Review";
 import Contact from "../user/Contact";
 import WebsiteLayout from "../website/WebsiteLayout";
+import WebHome from "../website/home/WebHome";
+import WebAbout from "../website/about/WebAbout";
+import WebContact from "../website/contact/WebContact";
+import WebSub from "../website/plan/WebSub";
 
 const routes = createHashRouter([
   {
     path: "/",
     element: <PublicOnlyRoute element={<WebsiteLayout />} />,
+    children: [
+      {
+        path: "/",
+        element: <WebHome />,
+      },
+      {
+        path: "/about",
+        element: <WebAbout />,
+      },
+      {
+        path: "/contact",
+        element: <WebContact />,
+      },
+      {
+        path: "/plans",
+        element: <WebSub />,
+      },
+    ],
   },
   {
     path: "/ad/login",

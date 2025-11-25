@@ -1,6 +1,12 @@
 import { Box, Typography, Button } from "@mui/material";
 import { images } from "../../assets/Images/Images";
+import { keyframes } from "@mui/system";
 
+const rotate = keyframes`
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(10deg); }
+  100% { transform: rotate(0deg); }
+`;
 const WebBanner = () => {
   return (
     <Box
@@ -81,6 +87,7 @@ const WebBanner = () => {
           sx={{
             width: { xs: "90%", md: "80%" },
             maxWidth: "450px",
+            animation: `${rotate} 10s linear infinite`, 
           }}
         />
       </Box>
