@@ -113,7 +113,7 @@ const WebNavbar = () => {
       </Box>
 
       {/* DRAWER SIDEBAR */}
-      <Drawer anchor="right" open={open} onClose={() => setOpen(false)}>
+      <Drawer anchor="right" open={open} onClose={() => setOpen(false)} sx={{zIndex:"999999999"}}>
         <Box sx={{ width: 260, p: 2 }}>
           {/* Sidebar Logo */}
           <Box sx={{ textAlign: "center", pb: 2 }}>
@@ -138,7 +138,7 @@ const WebNavbar = () => {
                     cursor: "pointer",
                     fontWeight: 600,
                     py: 1.5,
-                    borderLeft: isActive ? "4px solid var(--newprimary)" : "4px solid transparent",
+                    // borderLeft: isActive ? "4px solid var(--newprimary)" : "4px solid transparent",
                     background: isActive ? "rgba(0, 0, 0, 0.05)" : "transparent",
                   }}
                   onClick={() => {
@@ -156,7 +156,7 @@ const WebNavbar = () => {
               <Button
                 variant="contained"
                 fullWidth
-                sx={{ textTransform: "none", background: "var(--newprimary)",fontFamily:"Medium_M !important" }}
+                sx={{ textTransform: "none", background: "var(--newprimary)",fontFamily:"Medium_M !important",mt:"20px !important" }}
                 onClick={() => {
                   navigate("/book");
                   setOpen(false);

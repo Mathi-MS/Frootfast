@@ -92,7 +92,7 @@ const WebFooter = () => {
       >
         {/* Phone */}
         <Link
-          href={`tel:${commonWord}`}
+          href={`tel:${commonWord.mobileNumber}`}
           underline="none"
           color="inherit"
           className="item"
