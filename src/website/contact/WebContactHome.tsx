@@ -240,7 +240,7 @@ const WebContactHome = () => {
                   sx={{
                     cursor: "pointer",
                   }}
-                  onClick={() => (window.location.href = `tel:${commonWord}`)}
+                  onClick={() => (window.location.href = `tel:${commonWord.mobileNumber}`)}
                 >
                   {commonWord.mobileNumber}
                 </Typography>

@@ -10,7 +10,9 @@ const WebsiteLayout = () => {
     <>
         <Box sx={{background:"var(--newprimary)",minHeight:"100vh"}}>
             <WebOffer />
-            <WebNavbar />
+            <Box sx={{position:"sticky",top:"0px",zIndex:9999,boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"}}>
+              <WebNavbar />
+            </Box>
             <Outlet />
             <WebFooter />
         </Box>
