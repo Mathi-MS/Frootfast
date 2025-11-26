@@ -36,7 +36,7 @@ const testimonials = [
   },
 ];
 
-const WebTesti = () => {
+const WebTestiMobile = () => {
   const settings = {
     dots: false,
     arrows: false,
@@ -44,15 +44,16 @@ const WebTesti = () => {
     autoplay: true,
     autoplaySpeed: 2500,
     speed: 600,
-    slidesToShow: 3,
+    slidesToShow: 1,
     responsive: [
-      { breakpoint: 900, settings: { slidesToShow: 2 } },
+      { breakpoint: 900, settings: { slidesToShow: 1 } },
       { breakpoint: 600, settings: { slidesToShow: 1 } },
     ],
   };
 
   return (
-    <Box className="website-container" sx={{ py: 6,bgcolor:"#f5f5f5" , display: { xs: "none", sm: "none",md:"block"}}}>
+    <Box className="website-container" sx={{ py: 6,bgcolor:"#f5f5f5",    display: { xs: "block", sm: "none" } 
+ }}>
       <Typography
         sx={{
           fontSize: 40,
@@ -117,4 +118,4 @@ const WebTesti = () => {
   );
 };
 
-export default WebTesti;
+export default WebTestiMobile;
