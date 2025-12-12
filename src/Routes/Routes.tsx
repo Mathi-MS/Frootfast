@@ -17,30 +17,36 @@ import WebHome from "../website/home/WebHome";
 import WebAbout from "../website/about/WebAbout";
 import WebContact from "../website/contact/WebContact";
 import WebSub from "../website/plan/WebSub";
+import LaunchingSoon from "../LaunchingSoon";
 
 const routes = createHashRouter([
-  {
+    {
     path: "/",
+    element: <PublicOnlyRoute element={<LaunchingSoon />} />,
+  },
+  {
+    path: "/demo",
     element: <PublicOnlyRoute element={<WebsiteLayout />} />,
     children: [
       {
-        path: "/",
+        path: "/demo",
         element: <WebHome />,
       },
-      {
-        path: "/about",
-        element: <WebAbout />,
-      },
-      {
-        path: "/contact",
-        element: <WebContact />,
-      },
-      {
-        path: "/plans",
-        element: <WebSub />,
-      },
+      // {
+      //   path: "/about",
+      //   element: <WebAbout />,
+      // },
+      // {
+      //   path: "/contact",
+      //   element: <WebContact />,
+      // },
+      // {
+      //   path: "/plans",
+      //   element: <WebSub />,
+      // },
     ],
   },
+
   {
     path: "/ad/login",
     element: <PublicOnlyRoute element={<Login />} />,

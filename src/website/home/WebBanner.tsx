@@ -1,6 +1,7 @@
 import { Box, Typography, Button } from "@mui/material";
 import { images } from "../../assets/Images/Images";
 import { keyframes } from "@mui/system";
+import { useNavigate } from "react-router-dom";
 
 const rotate = keyframes`
   0% { transform: rotate(0deg); }
@@ -8,6 +9,8 @@ const rotate = keyframes`
   100% { transform: rotate(0deg); }
 `;
 const WebBanner = () => {
+  const navigate = useNavigate ()
+
   return (
     <Box
       sx={{
@@ -37,24 +40,25 @@ const WebBanner = () => {
           variant="h2"
           sx={{ fontSize: { xs: "28px", md: "42px" }, fontWeight: 700,fontFamily:"Bold_M",color:"var(--white)" }}
         >
-          Start Your Morning Fresh With FruitFast!
+          Fresh Fruit Salads, Delivered Fast!
         </Typography>
 
         <Typography
           sx={{
             mt: "15px !important",
             fontSize: { xs: "14px", md: "18px" },
-            maxWidth: "400px",
+            maxWidth: "450px",
             opacity: 0.8,
             fontFamily:"Regular_M",
             color:"var(--white)",
           }}
         >
-          Daily fresh fruit boxes delivered every morning. 10 cut fruits in every box. Healthy, fast & fresh!
+          Kick-start your day with nutrient-rich, freshly cut fruit bowls.Daily, weekly & monthly delivery plans available.
         </Typography>
 
         <Button
           variant="contained"
+          onClick={() => navigate("/book")}
           sx={{
             mt: 3,
             px: 3,

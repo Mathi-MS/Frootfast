@@ -14,9 +14,9 @@ function App() {
       <OutletProvider>
         <RouterProvider router={routes} />
         <CustomToast />
-        <SelectOutletPopup />
-        <WhatsappBottom />
-        <MobileBottom />
+        {/* <SelectOutletPopup /> */}
+        {/* <WhatsappBottom />
+        <MobileBottom /> */}
       </OutletProvider>
     </>
   );

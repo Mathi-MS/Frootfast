@@ -1,17 +1,18 @@
 import { Box, Typography, Button } from "@mui/material";
 import { images } from "../../assets/Images/Images";
+import { useNavigate } from "react-router-dom";
 
 const plans = [
   {
     title: "Basic Pack",
-    desc: "Daily box with 10 cut fruits",
+    desc: "Daily box with 7 cut fruits",
     weekly: "₹399",
     monthly: "₹1199",
     img: images.product1,
   },
   {
     title: "Premium Pack",
-    desc: "Larger portions + exotic fruits",
+    desc: "Nutritious fruits, veg & nuts mix.",
     weekly: "₹699",
     monthly: "₹1999",
     img: images.product2,
@@ -33,6 +34,7 @@ const plans = [
 ];
 
 const WebPlan = () => {
+  const navigate = useNavigate()
   return (
     <Box className="website-container" sx={{position:"relative", py: { xs: 6, md: 10 },background:"#002D00" }}>
       <Box sx={{
@@ -141,6 +143,7 @@ const WebPlan = () => {
             <Button
               fullWidth
               variant="contained"
+              onClick={()=>{navigate('/book')}}
               sx={{
                 backgroundColor: "var(--secondary)",
                 textTransform: "none",

@@ -1,8 +1,10 @@
 import { Box, Typography, Button, Stack } from "@mui/material";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import { images } from "../../assets/Images/Images";
+import { useNavigate } from "react-router-dom";
 
 const WebAboutHome = () => {
+  const navigate = useNavigate()
   return (
     <Box className="website-container" sx={{ py: { xs: 6, md: 10 },bgcolor:"var(--white)" }}>
       <Box
@@ -29,7 +31,31 @@ const WebAboutHome = () => {
 
         {/* RIGHT SIDE CONTENT */}
         <Box sx={{ width: { xs: "100%", md: "50%" } }}>
-                      {/* SHORT PARAGRAPH */}
+          <Typography
+            variant="h4"
+            fontWeight={700}
+            sx={{
+              mb: "10px !important",
+              fontSize: { xs: "1rem", md: "1.4rem" },
+              fontFamily: "Regular_M",
+              position: "relative",
+              pl:"15px !important",
+              "&::after": {
+                content: '""',
+                position: "absolute",
+                width: "8px",
+                height: "8px",
+                background: "var(--secondary)",
+                borderRadius:"200px",
+                top: "0px",
+                left: "0px",
+                bottom:"0px",
+                margin:"auto",
+              }
+            }}
+          >
+            About us
+          </Typography>
           <Typography
             sx={{
               color: "#555",
@@ -72,6 +98,7 @@ const WebAboutHome = () => {
           {/* BUTTON */}
           <Button
             variant="contained"
+            onClick={()=>{navigate("/book")}}
             sx={{
               backgroundColor: "var(--secondary)",
               px: 4,

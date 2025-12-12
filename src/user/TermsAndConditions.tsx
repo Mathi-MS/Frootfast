@@ -25,7 +25,14 @@ const TermsAndConditions = () => {
       </Typography>
 
       {/* Content */}
-      <Typography sx={{ fontSize: "15px", lineHeight: 1.8, color: "#333",fontFamily: 'Regular_M' }}>
+      <Typography
+        sx={{
+          fontSize: "15px",
+          lineHeight: 1.8,
+          color: "#333",
+          fontFamily: "Regular_M",
+        }}
+      >
         Welcome to <strong>FrootFast</strong>. By accessing and using this
         website, you agree to comply with and be bound by the following terms
         and conditions.
@@ -40,12 +47,12 @@ const TermsAndConditions = () => {
         your request will be processed for delivery based on availability.
         <br />
         <br />
-        <strong>3. Privacy:</strong> We respect your privacy. Your personal
-        details will only be used for order processing and communication.
+        <strong>3. Quality:</strong> We strive to deliver fresh and high-quality
+        fruits in every box.
         <br />
         <br />
-        <strong>4. Modification:</strong> We may revise these terms at any time
-        without prior notice. Please check this page regularly.
+        <strong>4. Delivery:</strong> Orders are delivered according to the
+        selected plan (daily, weekly, or monthly) and availability.
         <br />
         <br />
         <strong>5. Contact:</strong> For any queries, please reach out to our

@@ -11,32 +11,32 @@ const values = [
   {
     icon: <LuLeaf   style={{ fontSize: 40, color: "var(--primary)" }} />,
     title: "Fresh & Natural",
-    desc: "We source only the freshest seasonal fruits from trusted local farmers and suppliers",
+    desc: "We handpick fresh, seasonal fruits every morning to ensure natural taste and quality.",
   },
   {
     icon:  <GoShieldCheck   style={{ fontSize: 40, color: "var(--primary)" }} />,
     title: "Hygiene First",
-    desc: "State-of-the-art facilities with ISO-certified hygiene standards and food safety protocols",
+    desc: "Your fruits are washed, cut, and packed with clean, careful handling in a safe home-style environment.",
   },
   {
     icon: <IoIosTimer    style={{ fontSize: 40, color: "var(--primary)" }} />,
     title: "Timely Delivery",
-    desc: "Advanced logistics ensure your fruits reach you fresh before 8 AM every single day",
+    desc: "We deliver early in the morning so you can enjoy your fruits fresh and ready for the day.",
   },
   {
     icon: <FiUsers style={{ fontSize: 38, color: "var(--primary)" }} />,
     title: "Customer Focused",
-    desc: "Your health and satisfaction are our top priorities. We're here to serve you better",
+    desc: "Your health and satisfaction matter to us. We’re committed to giving you a fresh and reliable experience.",
   },
   {
     icon:  <MdOutlineHealthAndSafety  style={{ fontSize: 40, color: "var(--primary)" }} />,
     title: "Health Mission",
-    desc: "Making healthy eating convenient and accessible for busy modern lifestyles",
+    desc: "Our goal is to make healthy eating simple, easy, and accessible for everyone.",
   },
   {
     icon: <GoVerified   style={{ fontSize: 35, color: "var(--primary)" }} />,
     title: "Quality Assured",
-    desc: "Every fruit is hand-picked and quality-checked before it reaches your morning table",
+    desc: "Every fruit is checked for freshness before it goes into your box.",
   },
 ];
 

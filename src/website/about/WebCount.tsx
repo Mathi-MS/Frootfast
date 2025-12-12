@@ -2,16 +2,16 @@ import { Box, Typography } from "@mui/material";
 
 const stats = [
   {
-    count: "10,000+",
-    label: "Happy Customers",
+    count: "0+",
+    label: "Boxes Sold",
   },
   {
-    count: "5",
+    count: "2",
     label: "Cities Served",
   },
   {
-    count: "99%",
-    label: "On-Time Delivery",
+    count: "0+",
+    label: "Happy Customers",
   },
 ];
 
@@ -25,7 +25,7 @@ const WebCount = () => {
         fontWeight={700}
         sx={{ mb: 2,fontFamily:"Regular_M" }}
       >
-        Join the FruitFast Family
+        Join the FrootFast Family
       </Typography>
 
       {/* Subtitle */}
@@ -40,8 +40,7 @@ const WebCount = () => {
           lineHeight: 1.7,
         }}
       >
-        Thousands of customers trust us to deliver fresh, nutritious fruits every
-        morning. Experience the convenience and health benefits for yourself.
+        We’re just getting started, but our goal is simple — to deliver fresh, nutritious fruits to your doorstep every morning.
       </Typography>
 
       {/* Stats Flexbox */}

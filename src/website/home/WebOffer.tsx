@@ -15,7 +15,7 @@ const WebOffer: React.FC = () => {
     >
       <Marquee speed={70} gradient={false}>
         <span style={{ marginRight: "40px",fontFamily:"Regular_M" }}>
-          • Orders of $50 or more qualify for free shipping! •
+          • Frootfast Launching Soon! Daily, Weekly & Monthly Plans Available! •
         </span>
       </Marquee>
     </Box>

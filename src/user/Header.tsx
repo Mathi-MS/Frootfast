@@ -181,7 +181,7 @@ const Header = () => {
               Home
             </MenuItem>
             <Divider />
-            <MenuItem
+            {/* <MenuItem
               onClick={() => handleNavigate("/book/products")}
               sx={{
                 fontFamily: "Bold_M",
@@ -191,9 +191,9 @@ const Header = () => {
               }}
             >
               Products
-            </MenuItem>
+            </MenuItem> */}
             <Divider />
-            <MenuItem
+            {/* <MenuItem
               onClick={() => handleNavigate("/book/ordered")}
               sx={{
                 fontFamily: "Bold_M",
@@ -203,7 +203,7 @@ const Header = () => {
               }}
             >
               Ordered History
-            </MenuItem>
+            </MenuItem> */}
             {/* <Divider />
             <MenuItem
               onClick={() => handleNavigate("/book/contact")}

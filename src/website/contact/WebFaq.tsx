@@ -3,26 +3,37 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 const faqData = [
   {
-    question: "How fresh are the fruits delivered?",
+    question: "How does the fruit delivery service work?",
     answer:
-      "All fruits are cut fresh every morning between 4 AM - 7 AM and delivered before 8 AM to ensure maximum freshness.",
+      "We prepare fresh, cut fruits every morning and deliver them straight to your door. You can choose daily, weekly, or monthly plans based on your needs.",
   },
   {
-    question: "Which areas do you deliver?",
+    question: "Are the fruits washed and hygienically prepared?",
     answer:
-      "We currently serve multiple major cities and continue expanding. Enter your pincode during signup to check service availability.",
+      "Yes! All fruits are washed, cleaned, and cut in a neat, home-style hygienic environment before packing.",
   },
   {
-    question: "Can I pause or cancel my subscription?",
+    question: "What time will my order be delivered?",
     answer:
-      "Yes, you can pause, skip, or cancel your subscription anytime through your dashboard.",
+      "Most deliveries are completed in the early morning so you can start your day fresh.",
   },
   {
-    question: "Are the fruits hygienically packed?",
+    question: "Can I customize my fruit box?",
     answer:
-      "Absolutely. We use ISO-certified hygiene processes and sealed, food-grade packaging.",
+      "Yes, you can request to add or remove certain fruits based on availability. We try our best to match your preference.",
+  },
+  {
+    question: "What types of fruits do you include?",
+    answer:
+      "We include a mix of seasonal and fresh fruits. The selection may vary daily based on freshness and availability.",
+  },
+  {
+    question: "Do you offer refunds or replacements?",
+    answer:
+      "If there’s ever an issue with your box, we will replace it or provide a suitable solution. Your satisfaction matters to us.",
   },
 ];
+
 
 const WebFaq = () => {
   return (

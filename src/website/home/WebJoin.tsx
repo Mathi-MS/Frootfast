@@ -34,7 +34,7 @@ const WebJoin = () => {
           display:"block"
         }}
       >
-        Join thousands of happy customers enjoying fresh fruits every morning
+        Enjoy freshly cut fruits, delivered to your door. Start your mornings the healthy, fresh way.
       </Typography>
 
       <Button

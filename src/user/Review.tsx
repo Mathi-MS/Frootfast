@@ -4,29 +4,45 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { showSuccess } from "../Custom/CustomToast";
+import { useState, useEffect } from "react";
+import { TiStarFullOutline } from "react-icons/ti";
 
 const formSchema = z.object({
   name: z.string().min(2, "Enter your full name."),
   mobile: z.string().regex(/^\d{10}$/, "Enter a valid 10-digit number."),
   review: z.string().min(5, "Please enter at least 5 characters."),
+  rating: z.number().min(1, "Please select a rating."),
 });
 
 type FormData = z.infer<typeof formSchema>;
 
 const Review = () => {
+  const [rating, setRating] = useState(0);
   const {
     register,
     handleSubmit,
     reset,
+    setValue,
+    clearErrors,
     formState: { errors },
   } = useForm<FormData>({
     resolver: zodResolver(formSchema),
+    defaultValues: { rating: 0 },
   });
+
+  // Sync rating state with react-hook-form
+  useEffect(() => {
+    setValue("rating", rating);
+    if (rating > 0) {
+      clearErrors("rating");
+    }
+  }, [rating, setValue, clearErrors]);
 
   const onSubmit = (data: FormData) => {
     console.log("Review Data:", data);
     showSuccess("Thanks for your feedback!");
     reset();
+    setRating(0);
   };
 
   return (
@@ -105,11 +121,7 @@ const Review = () => {
       >
         {/* Name */}
         <div>
-          <input
-            type="text"
-            placeholder="Enter Your Name"
-            {...register("name")}
-          />
+          <input type="text" placeholder="Enter Your Name" {...register("name")} />
           {errors.name && (
             <Typography
               sx={{
@@ -164,12 +176,41 @@ const Review = () => {
           )}
         </div>
 
+        {/* Star Rating */}
+        <div style={{ display: "flex", justifyContent: "center", gap: "5px", fontSize: "24px" }}>
+          {[1, 2, 3, 4, 5].map((star) => (
+            <span
+              key={star}
+              onClick={() => setRating(star)}
+              style={{
+                cursor: "pointer",
+                color: star <= rating ? "#FFD700" : "#dcdadaff",
+                fontSize:"30px"
+              }}
+            >
+              <TiStarFullOutline />
+            </span>
+          ))}
+        </div>
+        {errors.rating && (
+          <Typography
+            sx={{
+              color: "var(--secondary)",
+              fontSize: "14px",
+              textAlign: "center",
+              fontFamily: "Medium_M",
+            }}
+          >
+            {errors.rating.message}
+          </Typography>
+        )}
+
+        {/* Hidden field for react-hook-form */}
+        <input type="hidden" {...register("rating")} />
+
         {/* Review Textarea */}
         <div>
-          <textarea
-            placeholder="Write your review..."
-            {...register("review")}
-          />
+          <textarea placeholder="Write your review..." {...register("review")} />
           {errors.review && (
             <Typography
               sx={{
