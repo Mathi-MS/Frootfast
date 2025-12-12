@@ -57,6 +57,8 @@ const LaunchingSoon = () => {
                borderRadius: "10px",
                margin: { xs: "20px", sm: "0" }
            }}>
+            <Box component={"img"} src={images.logo} alt='logo' width={90}/>
+
              <Typography
                 variant="h2"
                 sx={{
