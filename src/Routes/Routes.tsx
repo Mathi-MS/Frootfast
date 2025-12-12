@@ -32,18 +32,18 @@ const routes = createHashRouter([
         path: "/demo",
         element: <WebHome />,
       },
-      // {
-      //   path: "/about",
-      //   element: <WebAbout />,
-      // },
-      // {
-      //   path: "/contact",
-      //   element: <WebContact />,
-      // },
-      // {
-      //   path: "/plans",
-      //   element: <WebSub />,
-      // },
+      {
+        path: "/demo/about",
+        element: <WebAbout />,
+      },
+      {
+        path: "/demo/contact",
+        element: <WebContact />,
+      },
+      {
+        path: "/demo/plans",
+        element: <WebSub />,
+      },
     ],
   },
 

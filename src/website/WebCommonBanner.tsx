@@ -4,11 +4,11 @@ import { images } from "../assets/Images/Images";
 
 const pageTitles: Record<string, string> = {
   "/": "Home",
-  "/about": "About Us",
-  "/contact": "Contact Us",
-  "/plans": "Subscription Plans",
-  "/services": "Our Services",
-  "/portfolio": "Portfolio",
+  "/demo/about": "About Us",
+  "/demo/contact": "Contact Us",
+  "/demo/plans": "Subscription Plans",
+  "/demo/services": "Our Services",
+  "/demo/portfolio": "Portfolio",
 };
 
 const WebCommonBanner = () => {

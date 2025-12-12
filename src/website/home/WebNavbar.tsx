@@ -12,10 +12,10 @@ const WebNavbar = () => {
   const [open, setOpen] = useState(false);
 
   const menuItems = [
-    { label: "Home", path: "/" },
-    { label: "About", path: "/about" },
-    { label: "Subscription Plans", path: "/plans" },
-    { label: "Contact", path: "/contact" },
+    { label: "Home", path: "/demo" },
+    { label: "About", path: "/demo/about" },
+    { label: "Subscription Plans", path: "/demo/plans" },
+    { label: "Contact", path: "/demo/contact" },
   ];
 
   return (
