@@ -1,4 +1,4 @@
-import { createHashRouter } from "react-router-dom";
+import { createBrowserRouter } from "react-router-dom";
 import { PublicOnlyRoute } from "./ProtectedRoutes";
 import TermsAndConditions from "../user/TermsAndConditions";
 import Layout from "../user/Layout";
@@ -19,7 +19,7 @@ import WebContact from "../website/contact/WebContact";
 import WebSub from "../website/plan/WebSub";
 import LaunchingSoon from "../LaunchingSoon";
 
-const routes = createHashRouter([
+const routes = createBrowserRouter([
     {
     path: "/",
     element: <PublicOnlyRoute element={<LaunchingSoon />} />,
